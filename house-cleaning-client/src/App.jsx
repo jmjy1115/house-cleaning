@@ -1,24 +1,33 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
-import SlideShow from "./pages/Home/SlideShow/SlideShow"
+import Home from "./pages/Home/Home";
+import { Greeting, History, Directions } from "./pages/About";
+import { ServiceOverview, ServiceProcess, ExpectedOutcomes } from "./pages/ServiceInfo";
+import { ServiceCases, Reviews, RelatedNews } from "./pages/Gallery";
+import { Announcements, FAQ, Inquiries } from "./pages/Support";
 import "./App.css"
 
 function App() {
   return (
     <Router>
       <Layout>
-        <SlideShow />
-        <div className="example">
-          <h1>서비스사례</h1>
-        </div>
-        <div className="product">
-          <h1>서비스소개</h1>
-        </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about/greeting" element={<Greeting />} />
+          <Route path="/about/history" element={<History />} />
+          <Route path="/about/directions" element={<Directions />} />
+          <Route path="/service-info/service-overview" element={<ServiceOverview />} />
+          <Route path="/service-info/service-process" element={<ServiceProcess />} />
+          <Route path="/service-info/expected-outcomes" element={<ExpectedOutcomes />} />
+          <Route path="/gallery/service-cases" element={<ServiceCases />} />
+          <Route path="/gallery/reviews" element={<Reviews />} />
+          <Route path="/gallery/related-news" element={<RelatedNews />} />
+          <Route path="/support/announcements" element={<Announcements />} />
+          <Route path="/support/faq" element={<FAQ />} />
+          <Route path="/support/inquiries" element={<Inquiries />} />
+        </Routes>
       </Layout>
-      <Routes>
-        <Route path="/main/1/sub/1" />
-      </Routes>
     </Router>
   );
 }

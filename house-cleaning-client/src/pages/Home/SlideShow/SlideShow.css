@@ -1,0 +1,5 @@
+.carousel .slide img {
+  height: 400px; /* 원하는 높이로 설정 */
+  object-fit: cover;
+  object-position: center;
+}
