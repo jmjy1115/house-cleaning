@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "./MenuItem.css";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './MenuItem.css';
 
 function MenuItem({ title, mainAddress, subMenuItems, subAddresses }) {
-  const [isHovered, setIsHovered] = useState(false);
+  const [ isHovered, setIsHovered ] = useState(false);
 
   return (
     <div 

@@ -4,15 +4,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 10rem;
-  padding: 0.7rem 0;
-  color: black;
-  font-size: 1.2rem;
-  font-weight: 600;
-  transition: background-color 0.3s;
-}
-.main-menu:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.7rem 2rem;
+  font-size: 1.4rem;
+  font-weight: 900;
 }
 .main-item {
   color: black;
@@ -33,6 +27,9 @@
   background-color: white;
 }
 .sub-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 10rem;
   height: 2rem;
   padding: 0.5rem 0;

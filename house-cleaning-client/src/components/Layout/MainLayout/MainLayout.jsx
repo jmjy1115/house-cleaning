@@ -1,14 +1,15 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import MenuItem from "./MenuItem/MenuItem";
-import companyLogo from "../../assets/company-logo.jpeg";
-import "./Layout.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import MenuItem from './MenuItem/MenuItem';
+import companyLogo from '../../../assets/company-logo.jpeg';
+import iconMenuButton from '../../../assets/icon-menu-button.png';
+import './MainLayout.css';
 
 function Layout({ children }) {
   return (
     <div className="container">
       <div className='header'>
-        <Link to="/" className="company-logo">
+        <Link to='/' className="company-logo">
           <img src={companyLogo} alt="company-logo" />
           <h4>HOUSE CLEANING</h4>
         </Link>
@@ -37,7 +38,9 @@ function Layout({ children }) {
             subMenuItems={[ "공지사항", "자주묻는질문", "온라인문의" ]}
             subAddresses={[ "announcements", "faq", "inquiries" ]}
           />
-          <div className="main-menu">(전체)</div>
+          <div className="menu-button">
+            <img src={iconMenuButton} />
+          </div>
         </div>
       </div>
       {children}

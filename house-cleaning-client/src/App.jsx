@@ -1,34 +1,48 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout/Layout";
-import Home from "./pages/Home/Home";
-import { Greeting, History, Directions } from "./pages/About";
-import { ServiceOverview, ServiceProcess, ExpectedOutcomes } from "./pages/ServiceInfo";
-import { ServiceCases, Reviews, RelatedNews } from "./pages/Gallery";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MainLayout from './components/Layout/MainLayout/MainLayout';
+import SubLayout from './components/Layout/SubLayout/SubLayout';
+import Home from './pages/Home/Home';
+import { Greeting, History, Directions } from './pages/About';
+import { ServiceOverview, ServiceProcess, ExpectedOutcomes } from './pages/ServiceInfo';
+import { ServiceCases, Reviews, RelatedNews } from './pages/Gallery';
 import { Announcements, FAQ, Inquiries } from "./pages/Support";
-import "./App.css"
+import './App.css';
 
 function App() {
   return (
     <Router>
-      <Layout>
+      <MainLayout>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about/greeting" element={<Greeting />} />
-          <Route path="/about/history" element={<History />} />
-          <Route path="/about/directions" element={<Directions />} />
-          <Route path="/service-info/service-overview" element={<ServiceOverview />} />
-          <Route path="/service-info/service-process" element={<ServiceProcess />} />
-          <Route path="/service-info/expected-outcomes" element={<ExpectedOutcomes />} />
-          <Route path="/gallery/service-cases" element={<ServiceCases />} />
-          <Route path="/gallery/reviews" element={<Reviews />} />
-          <Route path="/gallery/related-news" element={<RelatedNews />} />
-          <Route path="/support/announcements" element={<Announcements />} />
-          <Route path="/support/faq" element={<FAQ />} />
-          <Route path="/support/inquiries" element={<Inquiries />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/about/*' element={<SubLayoutRoutes />} />
+          <Route path='/service-info/*' element={<SubLayoutRoutes />} />
+          <Route path='/gallery/*' element={<SubLayoutRoutes />} />
+          <Route path='/support/*' element={<SubLayoutRoutes />} />
         </Routes>
-      </Layout>
+      </MainLayout>
     </Router>
+  );
+}
+
+function SubLayoutRoutes() {
+  return (
+    <SubLayout>
+      <Routes>
+        <Route path='greeting' element={<Greeting />} />
+        <Route path='history' element={<History />} />
+        <Route path='directions' element={<Directions />} />
+        <Route path='service-overview' element={<ServiceOverview />} />
+        <Route path='service-process' element={<ServiceProcess />} />
+        <Route path='expected-outcomes' element={<ExpectedOutcomes />} />
+        <Route path='service-cases' element={<ServiceCases />} />
+        <Route path='reviews' element={<Reviews />} />
+        <Route path='related-news' element={<RelatedNews />} />
+        <Route path='announcements' element={<Announcements />} />
+        <Route path='faq' element={<FAQ />} />
+        <Route path='inquiries' element={<Inquiries />} />
+      </Routes>
+    </SubLayout>
   );
 }
 

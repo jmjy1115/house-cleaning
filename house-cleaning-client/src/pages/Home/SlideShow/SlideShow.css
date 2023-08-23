@@ -1,5 +1,29 @@
 .carousel .slide img {
-  height: 400px; /* 원하는 높이로 설정 */
+  height: calc(100vh - 5rem);
   object-fit: cover;
   object-position: center;
+}
+
+.carousel .slide .message {
+  position: absolute;
+  top: 20%;
+  left: 0%;
+  margin-left: 10vw;
+  padding: 0;
+  color: white;
+  text-align: left;
+}
+.carousel .slide .message .main-message {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  font-weight: 400;
+}
+.carousel .slide .message .main-message span {
+  font-weight: bold;
+}
+.carousel .slide .message .sub-message {
+  margin: 0;
+  padding-bottom: 0.1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
 }

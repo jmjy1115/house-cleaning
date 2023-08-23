@@ -1,0 +1,82 @@
+.sub-layout {
+  width: 100%;
+}
+
+.sub-layout img {
+  display: flex;
+  width: 100%;
+  height: 15rem;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 3.5rem;
+  padding: 0;
+  border-top: 0.1rem solid lightgray;
+  border-bottom: 0.1rem solid lightgray;
+}
+.nav-menu > a {
+  width: 5rem;
+  margin-left: 10vw;
+  border-left: 0.1rem solid lightgray;
+  border-right: 0.1rem solid lightgray;
+}
+.nav-menu > div:nth-child(2) {
+  width: 12rem;
+  border-right: 0.1rem solid lightgray;
+}
+.nav-menu > div:nth-child(3) {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 11rem;
+  padding: 0 1rem;
+  border-right: 0.1rem solid lightgray;
+}
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.nav-current-menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+}
+.nav-other-menus {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+  border: 0.1rem solid lightgray;
+  border-top: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+.nav-other-menu {
+  display: flex;
+  align-items: center;
+  height: 3.5rem;
+  padding: 0;
+  text-align: center;
+}
+.nav-item img {
+  width: 1.5rem;
+  height: 1.5rem;
+}

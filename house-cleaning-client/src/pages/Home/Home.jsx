@@ -1,8 +1,8 @@
-import React from "react";
-import SlideShow from "./SlideShow/SlideShow";
-import { ServiceCases } from "../Gallery"
-import { ServiceOverview } from "../ServiceInfo";
-import "./Home.css"
+import React from 'react';
+import SlideShow from './SlideShow/SlideShow';
+import { ServiceCases } from '../Gallery'
+import { ServiceOverview } from '../ServiceInfo';
+import './Home.css'
 
 function Home() {
   return (
