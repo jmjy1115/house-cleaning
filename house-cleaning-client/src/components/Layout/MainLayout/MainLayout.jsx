@@ -5,7 +5,7 @@ import companyLogo from '../../../assets/company-logo.jpeg';
 import iconMenuButton from '../../../assets/icon-menu-button.png';
 import './MainLayout.css';
 
-function Layout({ children }) {
+function MainLayout({ children }) {
   return (
     <div className="container">
       <div className='header'>
@@ -50,4 +50,4 @@ function Layout({ children }) {
   );
 }
 
-export default Layout;
+export default MainLayout;

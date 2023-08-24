@@ -11,10 +11,7 @@ function MenuItem({ title, mainAddress, subMenuItems, subAddresses }) {
       onMouseLeave={() => setIsHovered(false)}
       className="main-menu"
     >
-      <Link 
-        to={`/${mainAddress}/${subAddresses[0]}`}
-        className="main-item"
-      >
+      <Link to={`/${mainAddress}/${subAddresses[0]}`}>
         {title}
       </Link>
       {isHovered && (

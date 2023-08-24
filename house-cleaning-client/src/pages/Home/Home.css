@@ -1,0 +1,75 @@
+/* 시공사례 */
+.service-cases {
+  width: 77.5rem;
+  height: calc(100vh - 5rem);
+  margin: 0 auto;
+}
+.cases-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  padding: 0 1.5rem;
+  color: white;
+  background-color: darkblue;
+}
+.cases-header h1 {
+  font-size: 2.2rem;
+}
+.cases-view-more {
+  padding: 1rem;
+  color: darkblue;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: 0.1rem solid lightblue;
+  border-radius: 1rem;
+  background-color: white;
+}
+.cases-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+.cases-image {
+  width: 23.5rem;
+  border: 1rem solid darkblue;
+}
+
+/* 제품소개 */
+.service-introduction {
+  width: 77.5rem;
+  height: calc(100vh - 5rem);
+  margin: 0 auto;
+}
+.service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  padding: 0 1.5rem;
+  color: white;
+  background-color: #50C878;
+}
+.service-header h1 {
+  font-size: 2.2rem;
+}
+.service-view-more {
+  padding: 1rem;
+  color: #50C878;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: 0.1rem solid lightgreen;
+  border-radius: 1rem;
+  background-color: white;
+}
+.service-content {
+  width: 100%;
+  height: calc(100vh - 13rem);
+  background-color: lightgreen;
+}

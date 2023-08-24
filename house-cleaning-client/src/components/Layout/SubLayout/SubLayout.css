@@ -1,4 +1,6 @@
 .sub-layout {
+  position: fixed;
+  padding-top: 5rem;
   width: 100%;
 }
 
@@ -14,29 +16,27 @@
 
 .nav-menu {
   display: flex;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: 3.5rem;
+  margin: 0 auto;
   padding: 0;
   border-top: 0.1rem solid lightgray;
   border-bottom: 0.1rem solid lightgray;
 }
 .nav-menu > a {
   width: 5rem;
-  margin-left: 10vw;
   border-left: 0.1rem solid lightgray;
-  border-right: 0.1rem solid lightgray;
 }
 .nav-menu > div:nth-child(2) {
   width: 12rem;
-  border-right: 0.1rem solid lightgray;
+  border-left: 0.1rem solid lightgray;
 }
 .nav-menu > div:nth-child(3) {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  width: 11rem;
-  padding: 0 1rem;
+  width: 13rem;
+  border-left: 0.1rem solid lightgray;
   border-right: 0.1rem solid lightgray;
 }
 .nav-item {
@@ -47,36 +47,47 @@
   font-size: 1.2rem;
   font-weight: 600;
 }
-
 .nav-current-menu {
   display: flex;
+  justify-content: center;
   align-items: center;
+  width: 7.5rem;
   height: 100%;
-  margin: 0 auto;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 .nav-other-menus {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: -0.05rem;
   z-index: 10;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   width: 13rem;
   border: 0.1rem solid lightgray;
   border-top: 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: white;
 }
 .nav-other-menu {
   display: flex;
+  justify-content: center;
   align-items: center;
+  width: 7.5rem;
   height: 3.5rem;
+  margin-left: 1rem;
+  margin-right: 4.5rem;
   padding: 0;
   text-align: center;
+}
+.nav-other-menu:visited {
+  color: black;
 }
 .nav-item img {
   width: 1.5rem;
   height: 1.5rem;
+  margin: 0 1rem;
+}
+.right-space {
+  width: 47.1rem;
 }

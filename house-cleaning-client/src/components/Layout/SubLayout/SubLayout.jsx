@@ -77,15 +77,21 @@ function SubLayout() {
           <div className="nav-current-menu">{currentSubMenuName}</div>
           {isHovered && (
             <div className="nav-other-menus">
-              {Array.from(subMenuNames.values()).map((subMenuName, index) => (
-                <Link
-                  to={`/${mainMenuAddress}/${Array.from(subMenuNames.keys())[index]}`}
-                  key={index}
-                  className="nav-other-menu"
-                >
-                  {subMenuName}
-                </Link>
-              ))}
+              {Array.from(subMenuNames.entries()).map(([key, subMenuName], index) => {
+                if (subMenuName !== currentSubMenuName) {
+                  return (
+                    <Link
+                      to={`/${mainMenuAddress}/${key}`}
+                      key={index}
+                      className="nav-other-menu"
+                    >
+                      {subMenuName}
+                    </Link>
+                  );
+                }
+                // 조건에 부합하지 않는 경우 아무것도 렌더링하지 않음
+                return null;
+              })}
             </div>
           )}
           <img 
@@ -94,6 +100,7 @@ function SubLayout() {
             className="nav-item-img"
           />
         </div>
+        <div className="right-space"></div>
       </div>
     </div>
   );

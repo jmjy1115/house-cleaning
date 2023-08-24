@@ -1,14 +1,16 @@
+.carousel {
+  padding-top: 5rem;
+}
 .carousel .slide img {
   height: calc(100vh - 5rem);
   object-fit: cover;
   object-position: center;
 }
-
 .carousel .slide .message {
   position: absolute;
-  top: 20%;
+  top: 25%;
   left: 0%;
-  margin-left: 10vw;
+  margin-left: 10rem;
   padding: 0;
   color: white;
   text-align: left;
@@ -16,7 +18,7 @@
 .carousel .slide .message .main-message {
   margin-bottom: 2rem;
   font-size: 3rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 .carousel .slide .message .main-message span {
   font-weight: bold;
@@ -25,5 +27,4 @@
   margin: 0;
   padding-bottom: 0.1rem;
   font-size: 1.5rem;
-  font-weight: 500;
 }
