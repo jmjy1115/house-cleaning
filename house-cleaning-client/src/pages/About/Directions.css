@@ -1,0 +1,11 @@
+.directions-container {
+  display: flex;
+  justify-content: center;
+  width: 77.5rem;
+  margin: 3rem auto;
+}
+
+.directions-image {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}

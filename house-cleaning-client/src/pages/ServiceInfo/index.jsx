@@ -1,5 +1,3 @@
-import ServiceOverview from './ServiceOverview';
-import ServiceProcess from './ServiceProcess';
-import ExpectedOutcomes from './ExpectedOutcomes';
+import ServiceInfo from './ServiceInfo';
 
-export { ServiceOverview, ServiceProcess, ExpectedOutcomes };
+export { ServiceInfo };

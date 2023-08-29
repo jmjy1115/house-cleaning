@@ -1,0 +1,12 @@
+.service-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 77.5rem;
+  margin: 1rem auto;
+}
+
+#service-overview, #service-process, #expected-outcomes {
+  margin: 0 auto;
+  padding-top: 5rem;
+}

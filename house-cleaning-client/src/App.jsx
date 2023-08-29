@@ -4,7 +4,7 @@ import MainLayout from './components/Layout/MainLayout/MainLayout';
 import SubLayout from './components/Layout/SubLayout/SubLayout';
 import Home from './pages/Home/Home';
 import { Greeting, History, Directions } from './pages/About';
-import { ServiceOverview, ServiceProcess, ExpectedOutcomes } from './pages/ServiceInfo';
+import { ServiceInfo } from './pages/ServiceInfo';
 import { ServiceCases, Reviews, RelatedNews } from './pages/Gallery';
 import { Announcements, FAQ, Inquiries } from "./pages/Support";
 import './App.css';
@@ -32,9 +32,7 @@ function SubLayoutRoutes() {
         <Route path='greeting' element={<Greeting />} />
         <Route path='history' element={<History />} />
         <Route path='directions' element={<Directions />} />
-        <Route path='service-overview' element={<ServiceOverview />} />
-        <Route path='service-process' element={<ServiceProcess />} />
-        <Route path='expected-outcomes' element={<ExpectedOutcomes />} />
+        <Route path='service-info' element={<ServiceInfo />} />
         <Route path='service-cases' element={<ServiceCases />} />
         <Route path='reviews' element={<Reviews />} />
         <Route path='related-news' element={<RelatedNews />} />

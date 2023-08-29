@@ -1,0 +1,10 @@
+.greeting-container {
+  display: flex;
+  justify-content: center;
+  width: 77.5rem;
+  margin: 3rem auto;
+}
+
+.greeting-image {
+  margin: 0 auto;
+}

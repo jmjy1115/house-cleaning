@@ -1,4 +1,4 @@
-/* 시공사례 */
+/* 서비스사례 */
 .service-cases {
   width: 77.5rem;
   height: calc(100vh - 5rem);
@@ -39,7 +39,7 @@
   border: 1rem solid darkblue;
 }
 
-/* 제품소개 */
+/* 서비스소개 */
 .service-introduction {
   width: 77.5rem;
   height: calc(100vh - 5rem);

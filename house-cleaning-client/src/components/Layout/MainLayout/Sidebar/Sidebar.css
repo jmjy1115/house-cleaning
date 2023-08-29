@@ -1,0 +1,75 @@
+.sidebar {
+  position: fixed;
+  z-index: 20;
+  right: 0;
+  top: calc((100vh - 30.3rem) * 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 7rem;
+  height: 30.3rem;
+  padding: 0;
+  border-radius: 0.5rem 0 0 0.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.sidebar-sns-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 6.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 0.1rem solid black;
+}
+.sidebar-sns-link > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0.8rem;
+  border: 0.1rem solid lightgrey;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.sidebar-sns-link > a > img {
+  width: 3.5rem;
+}
+
+.sidebar-inquiries {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 6.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 0.1rem solid black;
+}
+.sidebar-contact-number {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 6.5rem;
+  padding: 0.5rem 0;
+}
+.sidebar-inquiries h4, .sidebar-contact-number h4 {
+  color: black;
+  font-size: 1.3rem;
+  font-weight: 550;
+  transform: scaleY(1.3);
+}
+.sidebar-contact-number h4 {
+  margin: 0;
+  margin-bottom: 0.2rem;
+}
+.sidebar-contact-number p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transform: scaleX(0.7);
+}

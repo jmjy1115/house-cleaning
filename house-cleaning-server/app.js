@@ -5,6 +5,7 @@ import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import session from 'express-session';
 import dotenv from 'dotenv';
+import cors from 'cors';
 
 // dotenv 설정
 dotenv.config();
@@ -32,6 +33,11 @@ sequelize.sync({ force: false })
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+// CORS 설정
+app.use(cors({
+	origin: 'http://localhost:3000'
+}));
+
 // 미들웨어 셋팅
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -49,6 +55,13 @@ app.use(session({
 }));
 
 // 라우터 연결
+
+//
+app.use((req, res, next) => {
+  const error = new Error(`${res.method} ${res.url} 라우터가 없습니다.`);
+  error.status = 404;
+  next(error);
+});
 
 // 에러 핸들링 미들웨어
 app.use((err, req, res, next) => {

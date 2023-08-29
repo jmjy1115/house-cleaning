@@ -1,0 +1,10 @@
+.history-container {
+  display: flex;
+  justify-content: center;
+  width: 77.5rem;
+  margin: 3rem auto;
+}
+
+.history-image {
+  margin: 0 auto;
+}

@@ -1,0 +1,30 @@
+.inquiries-container {
+  height: 40rem;
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.inquiries-container > form > input {
+  width: 20rem;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border: 0.1rem solid #ccc;
+}
+.inquiries-container > form > textarea {
+  width: 20rem;
+  margin-bottom: 1rem;
+  padding: 4rem 0.8rem;
+  border: 0.1rem solid #ccc;
+}
+
+button {
+  padding: 0.8rem 1rem;
+  color: #fff;
+  border: none;
+  background-color: #007BFF;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: #0056b3;
+}

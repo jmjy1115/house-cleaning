@@ -6,7 +6,7 @@ import './Home.css';
 
 function Home() {
   return (
-    <>
+    <div className='home-container'>
       <SlideShow />
       <div className="service-cases">
         <div className="cases-header">
@@ -31,7 +31,7 @@ function Home() {
         <div className="service-header">
           <h1>서비스소개</h1>
           <Link
-            to="/service-info/service-overview"
+            to="/service-info/service-info"
             className="service-view-more"
           >
             + 더보기
@@ -39,7 +39,7 @@ function Home() {
         </div>
         <div className='service-content'></div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -40,12 +40,12 @@ const menuMapping = {
   },
 }
 
-function SubLayout() {
+function SubLayout({ children }) {
   // 라우터 주소로부터 현재 메뉴의 주소명 분리하기
   const location = useLocation();
   const menuAddresses = location.pathname.split('/');
   const mainMenuAddress = menuAddresses[1];
-  const subMenuAddress = menuAddresses[2];
+  const subMenuAddress = menuAddresses[2] + (location.hash ? location.hash : '');
 
   // 메뉴의 한글명 찾기
   const mainMenuName = menuMapping[mainMenuAddress].name;
@@ -56,34 +56,38 @@ function SubLayout() {
   const [ isHovered, setIsHovered ] = useState(false);
 
   return (
-    <div className="sub-layout">
-      <img src={preparation} alt="preparation" />
-      <div className="nav-menu">
-        <Link to='/' className="nav-item">
+    <div className='sub-layout'>
+      <img
+        src={preparation}
+        alt='preparation'
+        className='sub-layout-image'
+      />
+      <div className='nav-menu'>
+        <Link to='/' className='nav-item'>
           <img 
             src={iconHome}
-            alt="icon-home"
-            className="nav-item-img"
+            alt='icon-home'
+            className='nav-item-img'
           />
         </Link>
-        <div className="nav-item">
-          <div className="nav-item-name">{mainMenuName}</div>
+        <div className='nav-item'>
+          <div className='nav-item-name'>{mainMenuName}</div>
         </div>
         <div 
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          className="nav-item"
+          className='nav-item'
         >
-          <div className="nav-current-menu">{currentSubMenuName}</div>
+          <div className='nav-current-menu'>{currentSubMenuName}</div>
           {isHovered && (
-            <div className="nav-other-menus">
+            <div className='nav-other-menus'>
               {Array.from(subMenuNames.entries()).map(([key, subMenuName], index) => {
                 if (subMenuName !== currentSubMenuName) {
                   return (
                     <Link
                       to={`/${mainMenuAddress}/${key}`}
                       key={index}
-                      className="nav-other-menu"
+                      className='nav-other-menu'
                     >
                       {subMenuName}
                     </Link>
@@ -96,12 +100,13 @@ function SubLayout() {
           )}
           <img 
             src={iconDownArrow}
-            alt="icon-down-arrow"
-            className="nav-item-img"
+            alt='icon-arrow-down'
+            className='nav-item-img'
           />
         </div>
         <div className="right-space"></div>
       </div>
+      {children}
     </div>
   );
 }
