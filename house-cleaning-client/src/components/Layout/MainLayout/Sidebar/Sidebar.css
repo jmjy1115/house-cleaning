@@ -57,7 +57,7 @@
   padding: 0.5rem 0;
 }
 .sidebar-inquiries h4, .sidebar-contact-number h4 {
-  color: black;
+  color: lightgray;
   font-size: 1.3rem;
   font-weight: 550;
   transform: scaleY(1.3);
@@ -68,6 +68,7 @@
 }
 .sidebar-contact-number p {
   margin: 0;
+  color: lightgray;
   font-size: 1.2rem;
   font-weight: 500;
   white-space: nowrap;

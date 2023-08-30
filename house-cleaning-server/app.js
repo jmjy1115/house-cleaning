@@ -11,6 +11,7 @@ import cors from 'cors';
 dotenv.config();
 
 // 라우터 로딩
+import inquiriesRouter from './routes/inquiries.js';
 
 // 시퀄라이즈 로딩
 import db from './models/index.js';
@@ -29,13 +30,13 @@ sequelize.sync({ force: false })
     console.error(err);
   });
 
-// ES6 모듈 사용에 따라 파일 경로, 디렉터리 이름 가져오기
+// ES6 모듈 사용으로 인해 파일 경로, 디렉터리 이름 가져오기
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // CORS 설정
 app.use(cors({
-	origin: 'http://localhost:3000'
+	origin: 'http://localhost:5173'
 }));
 
 // 미들웨어 셋팅
@@ -55,8 +56,9 @@ app.use(session({
 }));
 
 // 라우터 연결
+app.use('/inquiries', inquiriesRouter);
 
-//
+// 404 Not Found 에러 핸들러(라우팅 에러 처리)
 app.use((req, res, next) => {
   const error = new Error(`${res.method} ${res.url} 라우터가 없습니다.`);
   error.status = 404;
@@ -73,7 +75,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-// 서버 시작
+// 서버 실행
 app.listen(app.get('port'), () => {
   console.log(app.get('port'), "번 포트에서 대기 중");
 });

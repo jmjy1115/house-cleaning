@@ -8,7 +8,7 @@ function Inquiries() {
     phone: '',
     email: '',
     address: '',
-    requestDetails: ''
+    inquiryDetails: ''
   });
 
   const handleChange = (e) => {
@@ -22,7 +22,9 @@ function Inquiries() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('#');
+      const response = await axios.post(
+        'http://localhost:8000/inquiries/send-email', formData
+      );
       console.log(response.data);
     } catch {
       console.error(error);
@@ -31,13 +33,13 @@ function Inquiries() {
 
   return (
     <div className="inquiries-container">
-      <h1>견적 문의하기</h1>
+      <h1>온라인 문의</h1>
       <form onSubmit={handleSubmit}>
         <input type="text" name="name" placeholder="이름" value={formData.name} onChange={handleChange} /><br />
         <input type="text" name="phone" placeholder="휴대폰번호" value={formData.phone} onChange={handleChange} /><br />
         <input type="email" name="email" placeholder="이메일" value={formData.email} onChange={handleChange} /><br />
         <input type="text" name="address" placeholder="주소" value={formData.address} onChange={handleChange} /><br />
-        <textarea name="requestDetails" placeholder="견적요청내용" value={formData.requestDetails} onChange={handleChange} /><br />
+        <textarea name="inquiryDetails" placeholder="문의내용" value={formData.inquiryDetails} onChange={handleChange} /><br />
         <button type="submit">문의하기</button>
       </form>
     </div>
