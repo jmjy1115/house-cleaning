@@ -11,7 +11,8 @@ import cors from 'cors';
 dotenv.config();
 
 // 라우터 로딩
-import inquiriesRouter from './routes/inquiries.js';
+import reviewRouter from './routes/review.js';
+import inquiryRouter from './routes/inquiry.js';
 
 // 시퀄라이즈 로딩
 import db from './models/index.js';
@@ -56,7 +57,8 @@ app.use(session({
 }));
 
 // 라우터 연결
-app.use('/inquiries', inquiriesRouter);
+app.use('/review', reviewRouter);
+app.use('/inquiry', inquiryRouter);
 
 // 404 Not Found 에러 핸들러(라우팅 에러 처리)
 app.use((req, res, next) => {
